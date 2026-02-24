@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Fade's H.M BARBER - Corso Carlo Alberto 88, Ancona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>✂️ Fresh Fade's H.M BARBER</h1>
+        <p>Corso Carlo Alberto 88, Ancona</p>
+        <div class="rating">
+            <span>⭐⭐⭐⭐⭐</span> 5,0 (3 recensioni)
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#chi-siamo">Chi Siamo</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#mappa">Dove Siamo</a>
+        <a href="#orari">Orari</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <section id="chi-siamo" class="about-section">
+        <div class="container">
+            <h2>Chi Siamo</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Esperienza e Passione al Tuo Servizio</h3>
+                    <p>Benvenuti da <strong>Fresh Fade's H.M BARBER</strong>, dove l'arte della barberia incontra anni di esperienza professionale.</p>
+                    
+                    <p>Il nostro barbiere ha perfezionato la sua arte lavorando per <strong>oltre 5 anni in diversi saloni prestigiosi</strong>, acquisendo tecniche avanzate e sviluppando uno stile unico che combina tradizione e modernità.</p>
+                    
+                    <p>Grazie a questa esperienza maturata in contesti diversi, abbiamo imparato a comprendere le esigenze di ogni cliente, offrendo un servizio personalizzato che valorizza il tuo stile personale.</p>
+                    
+                    <div class="experience-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✂️</span>
+                            <h4>5+ Anni di Esperienza</h4>
+                            <p>Formazione in diversi saloni di prestigio</p>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎓</span>
+                            <h4>Tecniche Avanzate</h4>
+                            <p>Specializzazione in fade, sfumature e styling moderno</p>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⭐</span>
+                            <h4>Qualità Garantita</h4>
+                            <p>Attenzione ai dettagli e risultati impeccabili</p>
+                        </div>
+                    </div>
+                    
+                    <p class="mission">La nostra missione è farti sentire al meglio, con un taglio che rispecchia la tua personalità e il tuo stile di vita. Ogni cliente è unico, e così deve essere il suo look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>La Nostra Gallery</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <div class="carousel-slide">
+                        <img src="IMAGE_URL_1" alt="Fresh Fade's H.M BARBER - Foto 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="IMAGE_URL_2" alt="Fresh Fade's H.M BARBER - Foto 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="IMAGE_URL_3" alt="Fresh Fade's H.M BARBER - Foto 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="IMAGE_URL_4" alt="Fresh Fade's H.M BARBER - Foto 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="IMAGE_URL_5" alt="Fresh Fade's H.M BARBER - Foto 5">
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots"></div>
+        </div>
+    </section>
+
+    <section id="servizi" class="services">
+        <div class="container">
+            <h2>I Nostri Servizi</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>✂️ Taglio Classico</h3>
+                    <p>Taglio professionale con attenzione ai dettagli e al tuo stile personale.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🪒 Rasatura Barba</h3>
+                    <p>Rasatura tradizionale con lama per un risultato perfetto e rilassante.</p>
+                </div>
+                <div class="service-card">
+                    <h3>💈 Rifinitura Barba</h3>
+                    <p>Modellatura e cura della barba per un look curato e moderno.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔥 Fresh Fade</h3>
+                    <p>Il nostro servizio signature per un fade perfetto e fresco.</p>
+                </div>
+                <div class="service-card">
+                    <h3>👦 Taglio Bambini</h3>
+                    <p>Servizio dedicato ai più piccoli in un ambiente accogliente.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎨 Styling</h3>
+                    <p>Styling professionale per ogni occasione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mappa" class="map-section">
+        <div class="container">
+            <h2>📍 Puoi Trovarci Qui</h2>
+            <p class="map-subtitle">Corso Carlo Alberto 88, 60127 Ancona AN</p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.123456789!2d13.516789!3d43.616667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d7f5f5f5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sCorso%20Carlo%20Alberto%2C%2088%2C%2060127%20Ancona%20AN!5e0!3m2!1sit!2sit!4v1234567890"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="orari" class="orari">
+        <div class="container">
+            <h2>⏰ Orari di Apertura</h2>
+            <div class="orari-info">
+                <p><strong>Lunedì:</strong> 08:30 - 20:00</p>
+                <p><strong>Martedì:</strong> 08:30 - 20:00</p>
+                <p><strong>Mercoledì:</strong> 08:30 - 20:00</p>
+                <p><strong>Giovedì:</strong> 08:30 - 20:00</p>
+                <p><strong>Venerdì:</strong> 08:30 - 20:00</p>
+                <p><strong>Sabato:</strong> 08:30 - 20:00</p>
+                <p><strong>Domenica:</strong> Chiuso</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="contatti">
+        <div class="container">
+            <h2>📞 Contatti</h2>
+            <div class="contatti-info">
+                <p>📍 <strong>Indirizzo:</strong><br>Corso Carlo Alberto 88<br>60127 Ancona AN</p>
+                <p>📞 <strong>Telefono:</strong><br><a href="tel:+393510906046">351 090 6046</a></p>
+                <p>⏰ <strong>Orari:</strong><br>Lun-Sab: 08:30 - 20:00<br>Domenica: Chiuso</p>
+                <a href="tel:+393510906046" class="cta-button">Chiamaci Ora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fresh Fade's H.M BARBER - Corso Carlo Alberto 88, Ancona. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
