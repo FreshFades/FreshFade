@@ -1,3 +1,4 @@
+/* Reset e stili di base */
 * {
     margin: 0;
     padding: 0;
@@ -8,73 +9,91 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
+    background-color: #f4f4f4;
 }
 
+/* Container principale per centrare il contenuto */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - intestazione del sito */
 header {
-    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+    /* Gradiente lineare da sinistra-alto a destra-basso, da nero scuro a grigio scuro */
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     color: #fff;
-    padding: 2rem 0;
     text-align: center;
+    padding: 2rem 0;
+    /* Ombra sotto l'header per dare profondità */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
-    color: #d4af37;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
+/* Sezione rating stelle */
 .rating {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
 
 .rating span {
     color: #ffd700;
 }
 
+/* Menu di navigazione */
 nav {
-    background: #2c2c2c;
-    padding: 1rem;
-    text-align: center;
+    background-color: #333;
+    padding: 1rem 0;
+    /* Sticky fa rimanere il menu fisso in alto quando si scrolla */
     position: sticky;
     top: 0;
+    /* z-index alto per assicurarsi che il menu rimanga sopra gli altri elementi */
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1.5rem;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 0.5rem 1.5rem;
+    display: inline-block;
+    /* Transizione fluida quando si passa sopra con il mouse */
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d4af37;
+    background-color: #555;
+    border-radius: 5px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+/* Stili generali per tutte le sezioni */
+section {
+    padding: 4rem 0;
+    background-color: #fff;
+    margin-bottom: 2rem;
 }
 
-/* About Section */
-.about-section {
-    background: #fff;
-}
-
-.about-section h2 {
+section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #1a1a1a;
+}
+
+/* Sezione Chi Siamo */
+.about-section {
+    /* Gradiente leggero per dare un effetto visivo delicato */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .about-content {
@@ -84,33 +103,39 @@ nav a:hover {
 
 .about-text h3 {
     font-size: 1.8rem;
-    color: #d4af37;
+    color: #2d2d2d;
     margin-bottom: 1rem;
 }
 
 .about-text p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
     line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
 }
 
+/* Griglia dei punti di forza */
 .experience-highlights {
+    /* Grid layout responsivo: crea colonne automaticamente che si adattano allo schermo */
+    /* minmax(250px, 1fr) = ogni colonna minimo 250px, massimo si espande equamente */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .highlight-item {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
     text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    /* Transizione fluida per l'effetto hover */
+    transition: transform 0.3s ease;
 }
 
 .highlight-item:hover {
+    /* Sposta l'elemento verso l'alto di 5px quando ci si passa sopra */
     transform: translateY(-5px);
 }
 
@@ -121,104 +146,342 @@ nav a:hover {
 }
 
 .highlight-item h4 {
+    font-size: 1.3rem;
     color: #1a1a1a;
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
 }
 
 .highlight-item p {
-    color: #666;
     font-size: 1rem;
-    margin: 0;
+    color: #666;
 }
 
+/* Paragrafo mission */
 .mission {
-    background: #2c2c2c;
-    color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
     font-size: 1.2rem;
-    text-align: center;
-    margin-top: 2rem;
-    border-left: 5px solid #d4af37;
-}
-
-/* Gallery Carousel */
-.gallery-section {
-    background: #f9f9f9;
-    padding: 3rem 0;
-}
-
-.gallery-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-weight: bold;
     color: #1a1a1a;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    /* Bordo sinistro spesso per dare enfasi */
+    border-left: 4px solid #333;
+    margin-top: 2rem;
+}
+
+/* Sezione Gallery e Carosello */
+.gallery-section {
+    background-color: #f8f9fa;
 }
 
 .carousel-container {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    /* Nasconde le immagini che escono dal container */
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .carousel {
+    /* Flexbox per allineare le slide orizzontalmente */
     display: flex;
+    /* Transizione fluida quando si cambia slide */
+    /* transform viene modificato dal JavaScript per far scorrere le immagini */
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
+    /* Ogni slide occupa il 100% della larghezza del container */
     min-width: 100%;
     height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .carousel-slide img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover mantiene le proporzioni dell'immagine coprendone l'area */
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
+/* Pulsanti di navigazione del carosello */
 .carousel-button {
+    /* Position absolute per posizionare i pulsanti sopra il carosello */
     position: absolute;
     top: 50%;
+    /* Centra verticalmente il pulsante */
     transform: translateY(-50%);
-    background: rgba(212, 175, 55, 0.9);
+    /* rgba(0,0,0,0.5) = nero semi-trasparente */
+    background-color: rgba(0,0,0,0.5);
     color: #fff;
     border: none;
     padding: 1rem 1.5rem;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
 }
 
 .carousel-button:hover {
-    background: rgba(212, 175, 55, 1);
+    /* Diventa più scuro al passaggio del mouse */
+    background-color: rgba(0,0,0,0.8);
 }
 
 .carousel-button.prev {
-    left: 20px;
+    left: 10px;
 }
 
 .carousel-button.next {
-    right: 20px;
+    right: 10px;
 }
 
+/* Indicatori (dots) del carosello */
 .carousel-dots {
     text-align: center;
-    margin-top: 1.5rem;
+    padding: 1rem 0;
 }
 
 .dot {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background: #ccc;
-    border-radius
+    /* border-radius 50% crea un cerchio perfetto */
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    /* Il dot attivo diventa scuro per indicare la slide corrente */
+    background-color: #333;
+}
+
+/* Sezione Servizi */
+.services {
+    background-color: #fff;
+}
+
+.service-grid {
+    /* Grid responsivo: ogni card minimo 300px, si adatta automaticamente */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card per ogni servizio */
+.service-card {
+    /* Gradiente leggero per dare profondità */
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    /* Due transizioni: una per il movimento, una per l'ombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    /* Solleva la card di 10px e aumenta l'ombra per effetto "floating" */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sezione Mappa */
+.map-section {
+    background-color: #f8f9fa;
+}
+
+.map-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    /* overflow hidden per arrotondare gli angoli dell'iframe */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Sezione Orari */
+.orari {
+    background-color: #fff;
+}
+
+.orari-info {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.orari-info p {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    /* Linea divisoria tra ogni giorno */
+    border-bottom: 1px solid #ddd;
+}
+
+.orari-info p:last-child {
+    /* Rimuove la linea dall'ultimo elemento */
+    border-bottom: none;
+}
+
+.orari-info strong {
+    /* Larghezza fissa per allineare gli orari */
+    display: inline-block;
+    width: 120px;
+    color: #1a1a1a;
+}
+
+/* Sezione Contatti */
+.contatti {
+    background-color: #f8f9fa;
+}
+
+.contatti-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contatti-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.contatti-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contatti-info a:hover {
+    color: #555;
+}
+
+/* Pulsante Call-to-Action */
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    /* Due transizioni: colore di sfondo e scala (ingrandimento) */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+    /* scale(1.05) ingrandisce il pulsante del 5% */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design - tablet e dispositivi medi (larghezza massima 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        /* Su mobile i link diventano a blocco (uno sotto l'altro) */
+        display: block;
+        padding: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        /* Una sola colonna su tablet */
+        grid-template-columns: 1fr;
+    }
+
+    .experience-highlights {
+        /* Una sola colonna su tablet */
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-slide {
+        /* Altezza ridotta su schermi più piccoli */
+        height: 300px;
+    }
+}
+
+/* Responsive Design - smartphone (larghezza massima 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        /* Padding ridotto su smartphone per risparmiare spazio */
+        padding: 2rem 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-button {
+        /* Pulsanti più piccoli su smartphone */
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+}
