@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Intestazione principale con nome del negozio e informazioni di contatto -->
     <header>
         <h1>✂️ Fresh Fade's H.M BARBER</h1>
         <p>Corso Carlo Alberto 88, Ancona</p>
+        <!-- Valutazione del negozio -->
         <div class="rating">
-            <span>⭐⭐⭐⭐⭐</span> 5,0 (3 recensioni)
+            <span>⭐⭐⭐⭐⭐</span> 5,0 
         </div>
     </header>
 
+    <!-- Menu di navigazione principale -->
     <nav>
         <a href="#home">Home</a>
         <a href="#chi-siamo">Chi Siamo</a>
@@ -25,6 +28,7 @@
         <a href="#contatti">Contatti</a>
     </nav>
 
+    <!-- Sezione Chi Siamo - presenta il barbiere e la sua esperienza -->
     <section id="chi-siamo" class="about-section">
         <div class="container">
             <h2>Chi Siamo</h2>
@@ -37,6 +41,7 @@
                     
                     <p>Grazie a questa esperienza maturata in contesti diversi, abbiamo imparato a comprendere le esigenze di ogni cliente, offrendo un servizio personalizzato che valorizza il tuo stile personale.</p>
                     
+                    <!-- Punti di forza dell'attività -->
                     <div class="experience-highlights">
                         <div class="highlight-item">
                             <span class="highlight-icon">✂️</span>
@@ -61,10 +66,12 @@
         </div>
     </section>
 
+    <!-- Sezione Gallery - carosello di immagini dei lavori -->
     <section id="gallery" class="gallery-section">
         <div class="container">
             <h2>La Nostra Gallery</h2>
             <div class="carousel-container">
+                <!-- Carosello con immagini -->
                 <div class="carousel" id="carousel">
                     <div class="carousel-slide">
                         <img src="IMAGE_URL_1" alt="Fresh Fade's H.M BARBER - Foto 1">
@@ -82,17 +89,21 @@
                         <img src="IMAGE_URL_5" alt="Fresh Fade's H.M BARBER - Foto 5">
                     </div>
                 </div>
+                <!-- Pulsanti di navigazione del carosello -->
                 <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
                 <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
             </div>
+            <!-- Indicatori di posizione del carosello -->
             <div class="carousel-dots" id="dots"></div>
         </div>
     </section>
 
+    <!-- Sezione Servizi - griglia con tutti i servizi offerti -->
     <section id="servizi" class="services">
         <div class="container">
             <h2>I Nostri Servizi</h2>
             <div class="service-grid">
+                <!-- Card per ogni servizio offerto -->
                 <div class="service-card">
                     <h3>✂️ Taglio Classico</h3>
                     <p>Taglio professionale con attenzione ai dettagli e al tuo stile personale.</p>
@@ -121,11 +132,13 @@
         </div>
     </section>
 
+    <!-- Sezione Mappa - Google Maps integrata per mostrare la posizione -->
     <section id="mappa" class="map-section">
         <div class="container">
             <h2>📍 Puoi Trovarci Qui</h2>
             <p class="map-subtitle">Corso Carlo Alberto 88, 60127 Ancona AN</p>
             <div class="map-container">
+                <!-- iframe di Google Maps -->
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.123456789!2d13.516789!3d43.616667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d7f5f5f5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sCorso%20Carlo%20Alberto%2C%2088%2C%2060127%20Ancona%20AN!5e0!3m2!1sit!2sit!4v1234567890"
                     allowfullscreen="" 
@@ -136,37 +149,46 @@
         </div>
     </section>
 
+    <!-- Sezione Orari - orari di apertura settimanali -->
     <section id="orari" class="orari">
         <div class="container">
             <h2>⏰ Orari di Apertura</h2>
             <div class="orari-info">
-                <p><strong>Lunedì:</strong> 08:30 - 20:00</p>
-                <p><strong>Martedì:</strong> 08:30 - 20:00</p>
-                <p><strong>Mercoledì:</strong> 08:30 - 20:00</p>
-                <p><strong>Giovedì:</strong> 08:30 - 20:00</p>
-                <p><strong>Venerdì:</strong> 08:30 - 20:00</p>
-                <p><strong>Sabato:</strong> 08:30 - 20:00</p>
+                <!-- Orari per ogni giorno della settimana -->
+                <p><strong>Lunedì:</strong> 13:00 - 20:00</p>
+                <p><strong>Martedì:</strong> 09:00 - 20:00</p>
+                <p><strong>Mercoledì:</strong> 09:00 - 20:00</p>
+                <p><strong>Giovedì:</strong> 09:00 - 20:00</p>
+                <p><strong>Venerdì:</strong> 09:00 - 20:00</p>
+                <p><strong>Sabato:</strong> 09:00 - 20:00</p>
                 <p><strong>Domenica:</strong> Chiuso</p>
             </div>
         </div>
     </section>
 
+    <!-- Sezione Contatti - informazioni di contatto e call-to-action -->
     <section id="contatti" class="contatti">
         <div class="container">
             <h2>📞 Contatti</h2>
             <div class="contatti-info">
+                <!-- Indirizzo fisico -->
                 <p>📍 <strong>Indirizzo:</strong><br>Corso Carlo Alberto 88<br>60127 Ancona AN</p>
+                <!-- Numero di telefono cliccabile -->
                 <p>📞 <strong>Telefono:</strong><br><a href="tel:+393510906046">351 090 6046</a></p>
-                <p>⏰ <strong>Orari:</strong><br>Lun-Sab: 08:30 - 20:00<br>Domenica: Chiuso</p>
+                <!-- Riepilogo orari -->
+                <p>⏰ <strong>Orari:</strong><br>Lun-Sab: 09:00 - 20:00<br>Domenica: Chiuso</p>
+                <!-- Pulsante per chiamare direttamente -->
                 <a href="tel:+393510906046" class="cta-button">Chiamaci Ora</a>
             </div>
         </div>
     </section>
 
+    <!-- Footer con copyright -->
     <footer>
         <p>&copy; 2026 Fresh Fade's H.M BARBER - Corso Carlo Alberto 88, Ancona. Tutti i diritti riservati.</p>
     </footer>
 
+    <!-- Script JavaScript per le funzionalità interattive -->
     <script src="script.js"></script>
 </body>
 </html>
